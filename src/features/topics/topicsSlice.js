@@ -11,14 +11,16 @@ const topics = createSlice({
                 id: action.payload.id,
                 name: action.payload.name,
                 icon: action.payload.icon,
-                quizIDs: []
+                quizIds: []
             }
         }
     }
 });
 
 
-export const selectTopics = (state) => state.topics;
+export const selectTopics = (state) => {
+    return state.topics;
+};
 
 export const { addTopic } = topics.actions;
 export default topics.reducer;
