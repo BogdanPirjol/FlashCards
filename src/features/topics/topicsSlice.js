@@ -1,11 +1,9 @@
-import { createSlice } from 'react-redux';
+import { createSlice } from '@reduxjs/toolkit';
 
 const topics = createSlice({
     name: 'topics',
     initialState: {
-        topics: {
-
-        }
+        topics: {}
     },
     reducers: {
         addTopic: (state, action) => {
@@ -17,7 +15,7 @@ const topics = createSlice({
             }
         }
     }
-})
+});
 
 
 export const selectTopics = (state) => state.topics;
