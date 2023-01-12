@@ -32,6 +32,9 @@ const slice = createSlice({
     }
 });
 
-export const selectQuizzes = state => state.quizzes;
+export const selectQuizzes = state =>{ 
+    console.log(state);
+    return state.quizzes;
+}
 export const { addQuizz } = slice.actions;
 export default slice.reducer;
